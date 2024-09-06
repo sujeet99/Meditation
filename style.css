@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #3b5998;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 2px -2px gray;
+}
+
+.headContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headContainer i {
+    font-size: 2.5em; 
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.sidebar ul li a:hover {
+    color: #ffcc00;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f8ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .sidebar ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .headContainer i {
+        font-size: 2em;
+    }
+
+    .sidebar ul li a {
+        font-size: 1em;
+    }
+}
+
+/* Existing styles here */
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.card-text {
+    max-width: 70%;
+}
+
+.card-text h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.card-text p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.card-icon {
+    font-size: 3em;
+    color: #ff6b6b;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card-icon {
+        margin-top: 20px;
+        font-size: 2.5em;
+    }
+
+    .card-text {
+        max-width: 100%;
+    }
+}
+/* Existing styles here */
+
+.dropdown {
+    margin: 20px 0;
+}
+
+.dropdown-btn {
+    background-color: #3b5998;
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+}
+
+.dropdown-content p {
+    margin: 0;
+}
+
+.dropdown-btn:focus {
+    outline: none;
+}
+
+.dropdown-btn:hover {
+    background-color: #2d4373;
+}
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center; /* Center the content */
+}
+
+/* Search box styles */
+.search-container {
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;  /* Full-width container */
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+
+.filter-container {
+    margin-bottom: 20px;
+}
+
+.music-content {
+    display: none; /* Default hidden, will be shown based on filter */
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+}
+.icon-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.icon {
+    width: 100px; /* Adjust size as needed */
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+#doctor {
+    margin-top: 5px;
+    height: 300px;
+    width: 300px;
+}
+.hidden {
+    display: none;
+}
+.image {
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover;
+    cursor: pointer; 
+
+}
+#yoga {
+    margin-top: 5px;
+    height: 300px;
+    width: 300px;
+}
+.cover {
+    width: fit-content;
+    height: fit-content;
+}

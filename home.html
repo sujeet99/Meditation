@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Meditation Life</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/388f633969.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="headContainer">
+            <i class="fa-solid fa-user-nurse"></i>
+            <h1>Meditation Life</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="scene.html">Scene</a></li>
+                <li><a href="index.html">Relax</a></li>
+                <li><a href="talk.html">Talk</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="card">
+                <div class="card-text">
+                    <h2>Good evening, [Enter name]</h2>
+                    <p>You are beautiful!</p>
+                </div>
+                <div class="card-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+
+            <!-- Dropdown section -->
+            <div class="dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown()">What is Meditation Life?</button>
+                <div class="dropdown-content" id="dropdownContent">
+                    <p>Meditation is a practice that involves focusing the mind to achieve a state of mental clarity, relaxation, and heightened awareness. It often involves techniques such as mindfulness, concentration, or guided imagery to calm the mind and body. The goal can vary, from reducing stress and improving concentration to achieving a deeper understanding of oneself. Meditation can be practiced in various forms, including sitting quietly, repeating a mantra, or engaging in mindful movement</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            const content = document.getElementById('dropdownContent');
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

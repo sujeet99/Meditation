@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scene - Meditation Life</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/388f633969.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="headContainer">
+            <i class="fa-solid fa-user-nurse"></i>
+            <h1>Meditation Life</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="scene.html">Scene</a></li>
+                <li><a href="#">Relax</a></li>
+                <li><a href="talk.html">Talk</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <!-- Main Content for Scene -->
+            <main>
+                <img class="cover" src="image/doctor.jpg" alt="cover">
+                
+            </main>
+        </div>
+    </div>
+
+    <!-- Unsplash API Script -->
+    <script>
+        fetch('https://api.unsplash.com/photos/random?query=sunset&client_id=YOUR_ACCESS_KEY')
+        .then(response => response.json())
+        .then(data => {
+            const imageUrl = data.urls.regular;
+            document.querySelector('.scene img').src = imageUrl;
+        })
+        .catch(error => console.log(error));
+    </script>
+</body>
+</html>

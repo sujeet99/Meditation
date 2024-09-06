@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation Life - Music</title>
+    <link rel="stylesheet" href="style.css"> <!-- Add your CSS file link here -->
+    <script src="https://kit.fontawesome.com/388f633969.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="headContainer">
+            <i class="fa-solid fa-user-nurse"></i>
+            <h1>Meditation Life</h1>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="scene.html">Scene</a></li>
+                <li><a href="index.html">Relax</a></li>
+                <li><a href="talk.html">Talk</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content">
+            <div class="filter-container">
+                <label for="music-category">Choose a category:</label>
+                <select id="music-category" class="music-filter">
+                    <option value="all">All</option>
+                    <option value="nature-melodies">Nature Melodies</option>
+                    <option value="instrumental">Instrumental</option>
+                    <option value="lofi">Lofi</option>
+                    <option value="motivating">Motivating</option>
+                    <option value="ambient">Ambient</option>
+                </select>
+            </div>
+            
+            <!-- Music content -->
+            <div class="music-content-container">
+                <div class="music-content" data-category="nature-melodies">
+                    <p>Nature Melodies Track 1</p>
+                </div>
+                <div class="music-content" data-category="instrumental">
+                    <p>Instrumental Track 1</p>
+                </div>
+                <div class="music-content" data-category="lofi">
+                    <p>Lofi Track 1</p>
+                </div>
+                <div class="music-content" data-category="motivating">
+                    <p>Motivating Track 1</p>
+                </div>
+                <div class="music-content" data-category="ambient">
+                    <p>Ambient Track 1</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+       document.getElementById('music-category').addEventListener('change', function() {
+    var selectedCategory = this.value;
+    var musicItems = document.querySelectorAll('.music-content');
+
+    musicItems.forEach(function(item) {
+        if (selectedCategory === 'all' || item.getAttribute('data-category') === selectedCategory) {
+            item.style.display = 'block'; // Show matching content
+        } else {
+            item.style.display = 'none'; // Hide non-matching content
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
